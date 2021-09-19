@@ -1,0 +1,16 @@
+{
+  "name": "salen-store",
+  "version": "1.0.0",
+  "description": "Fake store",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "store",
+    "project",
+    "context"
+  ],
+  "author": "Joseph Salen <jsalen.91@gmail.com>",
+  "license": "MIT"
+}
