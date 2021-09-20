@@ -31,6 +31,7 @@ const GlobalStyles = createGlobalStyle`
     height: 100vh;
     margin: 0 auto;
     overscroll-behavior: none;
+    scroll-behavior: smooth;
     width: 100%;
   }
 
