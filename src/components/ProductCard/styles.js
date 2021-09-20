@@ -1,6 +1,8 @@
 import styled from 'styled-components';
+import { fadeIn } from '../../styles/animations';
 
 export const Article = styled.article`
+  ${fadeIn({ time: '0.36s' })}
   max-width: 400px;
   padding: 16px;
   margin: 12px 0;
