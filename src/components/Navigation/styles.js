@@ -5,11 +5,10 @@ import { fadeIn } from '../../styles/animations';
 export const Nav = styled.nav`
   width: 100%;
   max-width: 500px;
-  height: 59px;
+  height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
   position: fixed;
   right: 0;
   bottom: 0;
