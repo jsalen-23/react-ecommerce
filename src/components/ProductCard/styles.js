@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Article = styled.article`
   max-width: 400px;
   padding: 16px;
-  margin: 12px 8px;
+  margin: 12px 0;
   border: 2px solid #2c3841;
   border-radius: 4px;
 `;
@@ -13,7 +13,7 @@ export const ImageWrapper = styled.div`
   height: 100%;
 
   & img {
-    width: 320px;
+    width: 100%;
     max-width: 340px;
     max-height: 260px;
     box-shadow: 0px 0px 5px 2px rgb(44 56 65 / 50%);
