@@ -1,11 +1,14 @@
 import { Fragment } from 'react';
+
+import Routes from './routes';
+
 import GlobalStyles from './styles/GlobalStyles';
 
 const App = () => {
   return (
     <Fragment>
       <GlobalStyles />
-      <h1>Holis</h1>
+      <Routes />
     </Fragment>
   );
 };
