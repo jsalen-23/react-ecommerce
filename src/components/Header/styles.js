@@ -16,6 +16,7 @@ export const Link = styled(LinkRouter)`
   height: 35px;
   overflow: hidden;
   border-radius: 50%;
+
   & img {
     width: 35px;
     height: 35px;
@@ -24,7 +25,8 @@ export const Link = styled(LinkRouter)`
 `;
 
 export const Title = styled.h1`
-  font-size: 19px;
+  font-size: 24px;
   font-weight: 700;
   line-height: 22px;
+  user-select: none;
 `;

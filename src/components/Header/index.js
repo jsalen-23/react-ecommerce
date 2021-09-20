@@ -9,7 +9,7 @@ const Header = () => {
       <Link to='/user'>
         <img src={PROFILE_IMG} alt='Profile Picture' />
       </Link>
-      <Title>Inicio</Title>
+      <Title>Salen Store</Title>
     </Wrapper>
   );
 };
