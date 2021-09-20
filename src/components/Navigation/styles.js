@@ -15,6 +15,7 @@ export const Nav = styled.nav`
   bottom: 0;
   left: 0;
   border-top: 1px solid #2c3841;
+  background-color: #10161d;
   z-index: 3;
 `;
 

@@ -9,6 +9,7 @@ export const Wrapper = styled.header`
   align-items: center;
   padding: 0 18px;
   border-bottom: 1px solid #2c3841;
+  background-color: #10161d;
 `;
 
 export const Link = styled(LinkRouter)`
