@@ -1,5 +1,11 @@
+import Layout from '../../components/Layout';
+
 const Timeline = () => {
-  return <p>Timeline</p>;
+  return (
+    <Layout title='Timeline'>
+      <p>Timeline</p>
+    </Layout>
+  );
 };
 
 export default Timeline;
