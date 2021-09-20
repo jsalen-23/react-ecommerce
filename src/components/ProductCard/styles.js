@@ -13,10 +13,11 @@ export const ImageWrapper = styled.div`
   height: 100%;
 
   & img {
-    border-radius: 4px;
     width: 320px;
     max-width: 340px;
     max-height: 260px;
+    box-shadow: 0px 0px 5px 2px rgb(44 56 65 / 50%);
+    border-radius: 4px;
     object-fit: cover;
     aspect-ratio: 9 / 16;
   }
@@ -26,15 +27,12 @@ export const Footer = styled.footer`
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr auto;
 
   & div {
-    align-self: start;
-    margin-right: 8px;
-  }
-
-  & button {
-    align-self: end;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
   }
 `;
 
@@ -48,7 +46,7 @@ export const CardTitle = styled.h4`
 `;
 
 export const CardPrice = styled.p`
-  font-size: 18px;
-  font-weight: 300;
-  color: #f3f3f3;
+  font-size: 22px;
+  font-weight: 400;
+  color: #b5b5b5;
 `;

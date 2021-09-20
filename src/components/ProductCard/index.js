@@ -13,15 +13,16 @@ const ProductCard = () => {
         />
       </ImageWrapper>
       <Footer>
+        <CardTitle>
+          Product name un nombre de producto largo no se porque si de paso no
+          creo que haya algo asi
+        </CardTitle>
         <div>
-          <CardTitle>
-            Product name un nombre de producto largo no se porque
-          </CardTitle>
           <CardPrice>$ 10.00</CardPrice>
+          <Button>
+            Add to cart <MdArrowForward size='18' />
+          </Button>
         </div>
-        <Button>
-          Add to cart <MdArrowForward size='18' />
-        </Button>
       </Footer>
     </Article>
   );
