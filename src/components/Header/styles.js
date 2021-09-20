@@ -3,7 +3,7 @@ import { Link as LinkRouter } from 'react-router-dom';
 
 export const Wrapper = styled.header`
   width: 100%;
-  height: 60px;
+  height: 59px;
   display: flex;
   justify-content: space-between;
   align-items: center;
