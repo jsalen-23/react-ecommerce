@@ -1,11 +1,11 @@
 import Layout from '../../components/Layout';
 
-const Search = () => {
+const Cart = () => {
   return (
-    <Layout title='Search'>
+    <Layout title='Cart'>
       <p>Search</p>
     </Layout>
   );
 };
 
-export default Search;
+export default Cart;
