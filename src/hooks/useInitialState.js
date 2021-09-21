@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import initialState from '../initialState';
 
-const { API } = process.env;
+const API = process.env.API;
 
 const useInitialState = () => {
   const [state, setState] = useState(initialState);
