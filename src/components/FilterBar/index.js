@@ -5,7 +5,7 @@ const FilterBar = () => {
   return (
     <Wrapper>
       <Select name='filter'>
-        <option value='' disabled hidden selected>
+        <option value='' hidden defaultValue>
           Filter Category
         </option>
         <option value='electronics'>Electronics</option>
