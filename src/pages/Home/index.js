@@ -1,11 +1,11 @@
 import Layout from '../../components/Layout';
 import ProductCard from '../../components/ProductCard';
-import SearchBar from '../../components/SearchBar';
+import FilterBar from '../../components/FilterBar';
 
 const Home = () => {
   return (
     <Layout title='Home'>
-      <SearchBar />
+      <FilterBar />
       {[1, 2, 3].map((item) => (
         <ProductCard key={item} />
       ))}

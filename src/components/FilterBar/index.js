@@ -1,7 +1,7 @@
 import { Wrapper, Select } from './styles';
 import { MdFilterList } from 'react-icons/md';
 
-const SearchBar = () => {
+const FilterBar = () => {
   return (
     <Wrapper>
       <Select name='filter'>
@@ -17,4 +17,4 @@ const SearchBar = () => {
   );
 };
 
-export default SearchBar;
+export default FilterBar;
