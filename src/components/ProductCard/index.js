@@ -3,22 +3,16 @@ import Button from '../Button';
 import { Article, CardTitle, CardPrice, ImageWrapper, Footer } from './styles';
 import { MdArrowForward } from 'react-icons/md';
 
-const ProductCard = () => {
+const ProductCard = ({ image, title, price }) => {
   return (
     <Article>
       <ImageWrapper>
-        <img
-          src='https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg'
-          alt='Name'
-        />
+        <img src={image} alt={title} />
       </ImageWrapper>
       <Footer>
-        <CardTitle>
-          Product name un nombre de producto largo no se porque si de paso no
-          creo que haya algo asi
-        </CardTitle>
+        <CardTitle>{title}</CardTitle>
         <div>
-          <CardPrice>$ 10.00</CardPrice>
+          <CardPrice>$ {price}</CardPrice>
           <Button>
             Add to cart <MdArrowForward size='18' />
           </Button>
