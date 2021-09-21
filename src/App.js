@@ -1,15 +1,24 @@
-import { Fragment } from 'react';
+import AppProvider from './context/AppContext';
+import useInitialState from './hooks/useInitialState';
 
 import Routes from './routes';
 
 import GlobalStyles from './styles/GlobalStyles';
 
 const App = () => {
+  const initialState = useInitialState();
+  const isLoaded = Object.keys(initialState.state).length;
   return (
-    <Fragment>
-      <GlobalStyles />
-      <Routes />
-    </Fragment>
+    <>
+      {isLoaded ? (
+        <AppProvider>
+          <GlobalStyles />
+          <Routes />
+        </AppProvider>
+      ) : (
+        <h1>Loading...</h1>
+      )}
+    </>
   );
 };
 
