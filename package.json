@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "build": "webpack --mode=production",
-    "dev": "webpack serve --mode=development"
+    "start": "webpack serve --mode=development"
   },
   "keywords": [
     "store",
@@ -24,6 +24,8 @@
     "webpack-dev-server": "^4.2.1"
   },
   "dependencies": {
+    "axios": "^0.21.4",
+    "dotenv-webpack": "^7.0.3",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-helmet": "^6.1.0",
