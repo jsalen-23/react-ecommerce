@@ -9,12 +9,15 @@ const useInitialState = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const [category, setCategory] = useState(null);
 
   useEffect(() => {
     setLoading(true);
     const getProducts = async () => {
       try {
-        const response = await axios.get(API);
+        const response = await axios.get(
+          category ? `${API}/category/${category}` : API
+        );
         setProducts(response.data);
         setLoading(false);
       } catch (error) {
@@ -23,7 +26,7 @@ const useInitialState = () => {
       }
     };
     getProducts();
-  }, []);
+  }, [category]);
 
   const addToCart = (payload) => {
     setState({
@@ -53,6 +56,10 @@ const useInitialState = () => {
     });
   };
 
+  const changeCategory = (payload) => {
+    setCategory(payload);
+  };
+
   return {
     state,
     products,
@@ -62,6 +69,8 @@ const useInitialState = () => {
     addNewOrder,
     addToCart,
     removeFromCart,
+    changeCategory,
+    category,
   };
 };
 
