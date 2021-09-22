@@ -1,5 +1,4 @@
 import { Wrapper, Select } from './styles';
-import { MdFilterList } from 'react-icons/md';
 
 const FilterBar = () => {
   return (
