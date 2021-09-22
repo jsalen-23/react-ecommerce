@@ -12,6 +12,8 @@ export const BtnWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: baseline;
+  border-left: 2px solid #2c3841;
+  border-right: 2px solid #2c3841;
 `;
 
 export const Button = styled.button`
