@@ -10,8 +10,7 @@ const User = () => {
   const [show, setShow] = useState(false);
 
   return (
-    <Layout title='My account'>
-      <Title>Profile</Title>
+    <Layout title='Profile'>
       <UserCard />
       <BtnWrapper>
         <Button onClick={() => setShow(false)} active={!show}>
