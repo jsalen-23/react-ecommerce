@@ -5,6 +5,7 @@ import FilterBar from '../../components/FilterBar';
 
 import { AppContext } from '../../context/AppContext';
 import Error from '../../components/Error';
+import Loading from '../../components/Loading';
 
 const Home = () => {
   const { products, loading, error } = useContext(AppContext);
@@ -14,7 +15,7 @@ const Home = () => {
     <Layout title='Home'>
       <FilterBar />
       {loading ? (
-        <h1>Loading</h1>
+        <Loading />
       ) : (
         products.map((product) => <ProductCard key={product.id} {...product} />)
       )}
