@@ -3,7 +3,7 @@ import { loadingRing } from '../../styles/animations';
 
 export const Wrapper = styled.section`
   width: 100%;
-  height: calc(100vh - 212px);
+  height: 50vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -25,12 +25,12 @@ export const Loader = styled.div`
     margin: 8px;
     border: 8px solid #fff;
     border-radius: 50%;
+    border-color: #fff transparent transparent transparent;
     ${loadingRing({
       time: '1.4s',
       type: 'cubic-bezier(0.5, 0, 0.5, 1)',
       iteration: 'infinite',
     })}
-    border-color: #fff transparent transparent transparent;
 
     &:nth-child(1) {
       animation-delay: -0.45s;
