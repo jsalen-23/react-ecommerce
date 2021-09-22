@@ -4,14 +4,14 @@ import UserCard from '../../components/UserCard';
 import UserInfo from '../../components/UserInfo';
 import UserHistory from '../../components/UserHistory';
 
-import { BtnWrapper, Button } from './styles';
+import { BtnWrapper, Button, Title } from './styles';
 
 const User = () => {
   const [show, setShow] = useState(false);
 
   return (
     <Layout title='My account'>
-      <h1>Profile</h1>
+      <Title>Profile</Title>
       <UserCard />
       <BtnWrapper>
         <Button onClick={() => setShow(false)} active={!show}>
