@@ -1,11 +1,5 @@
 import styled from 'styled-components';
 
-export const Title = styled.h1`
-  font-size: 28px;
-  font-weight: 700;
-  text-align: center;
-`;
-
 export const BtnWrapper = styled.div`
   width: 100%;
   height: 50px;

@@ -4,7 +4,7 @@ import UserCard from '../../components/UserCard';
 import UserInfo from '../../components/UserInfo';
 import UserHistory from '../../components/UserHistory';
 
-import { BtnWrapper, Button, Title } from './styles';
+import { BtnWrapper, Button } from './styles';
 
 const User = () => {
   const [show, setShow] = useState(false);
