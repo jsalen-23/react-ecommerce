@@ -3,7 +3,8 @@ import styled from 'styled-components';
 export const Card = styled.section`
   width: 100%;
   height: auto;
-  border: 1px solid #2c3841;
+  border: 2px solid #2c3841;
+  border-bottom: none;
   border-radius: 4px;
   margin-top: 80px;
   position: relative;
