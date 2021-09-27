@@ -1,7 +1,7 @@
 import { Btn } from './styles';
 
-const Button = ({ children }) => {
-  return <Btn>{children}</Btn>;
+const Button = ({ children, size }) => {
+  return <Btn size={size}>{children}</Btn>;
 };
 
 export default Button;
