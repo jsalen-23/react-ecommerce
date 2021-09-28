@@ -10,7 +10,7 @@ export const InfoCard = styled.div`
   width: 100%;
   height: auto;
   padding: 16px;
-  margin: 16px auto;
+  margin: 12px auto;
   background-color: #1e2c3a;
   border-radius: 4px;
   font-size: 18px;
