@@ -18,5 +18,5 @@ export const Button = styled.button`
   color: ${(props) => (props.active ? '#f7f7f7' : '#8899a6')};
   background-color: transparent;
   border-bottom: ${(props) =>
-    props.active ? '3px solid rgba(29,155,240,0.6)' : 'none'};
+    props.active ? '3px solid rgba(29,155,240,0.6)' : '1px solid #2c3841'};
 `;
