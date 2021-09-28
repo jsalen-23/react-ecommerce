@@ -4,7 +4,7 @@ import { fadeIn } from '../../styles/animations';
 export const Article = styled.article`
   ${fadeIn({ time: '0.36s' })}
   max-width: 400px;
-  padding: 16px;
+
   margin: 12px 0;
   border: 2px solid #2c3841;
   border-radius: 4px;
@@ -16,7 +16,7 @@ export const ImageWrapper = styled.div`
 
   & img {
     width: 100%;
-    max-width: 340px;
+    max-width: 425px;
     max-height: 260px;
     box-shadow: 0px 0px 5px 2px rgb(44 56 65 / 50%);
     border-radius: 4px;
@@ -29,6 +29,7 @@ export const Footer = styled.footer`
   width: 100%;
   height: 100%;
   display: grid;
+  padding: 16px;
   grid-template-rows: 1fr auto;
 
   & div {
