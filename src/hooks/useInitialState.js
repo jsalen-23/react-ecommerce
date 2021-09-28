@@ -60,6 +60,13 @@ const useInitialState = () => {
     setCategory(payload);
   };
 
+  const addToHistory = (payload) => {
+    setState({
+      ...state,
+      history: [...state.history, payload],
+    });
+  };
+
   return {
     state,
     products,
@@ -71,6 +78,7 @@ const useInitialState = () => {
     removeFromCart,
     changeCategory,
     category,
+    addToHistory,
   };
 };
 
