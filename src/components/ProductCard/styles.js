@@ -4,7 +4,6 @@ import { fadeIn } from '../../styles/animations';
 export const Article = styled.article`
   ${fadeIn({ time: '0.36s' })}
   max-width: 400px;
-
   margin: 12px 0;
   border: 2px solid #2c3841;
   border-radius: 4px;
