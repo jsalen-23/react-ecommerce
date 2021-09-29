@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { AppContext } from '../../context/AppContext';
-import HistoryCard from '../HistoryCard';
+import DetailCard from '../DetailCard';
 import { Wrapper } from './styles';
 
 const UserHistory = () => {
@@ -11,7 +11,7 @@ const UserHistory = () => {
   return (
     <Wrapper>
       {history.map((product) => (
-        <HistoryCard key={product.id} {...product} />
+        <DetailCard key={product.id} {...product} />
       ))}
     </Wrapper>
   );
