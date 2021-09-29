@@ -31,14 +31,20 @@ const useInitialState = () => {
   const addToCart = (payload) => {
     setState({
       ...state,
-      cart: [...state.cart, payload],
+      cart: {
+        products: [...state.cart.products, payload],
+        total: state.cart.total + payload.price,
+      },
     });
   };
 
   const removeFromCart = (payload) => {
     setState({
       ...state,
-      cart: state.cart.filter((item) => item.id !== payload.id),
+      cart: {
+        products: state.cart.products.filter((item) => item.id !== payload.id),
+        total: state.cart.total - payload.price,
+      },
     });
   };
 
