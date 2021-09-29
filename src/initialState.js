@@ -1,6 +1,9 @@
 export default {
   buyer: [],
-  cart: [],
+  cart: {
+    products: [],
+    total: 0,
+  },
   orders: [],
   history: [
     {
