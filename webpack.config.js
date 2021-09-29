@@ -40,6 +40,14 @@ module.exports = (env, args) => {
             ],
           },
         },
+        {
+          test: /\.(png|jpe?g|gif)$/i,
+          use: [
+            {
+              loader: 'file-loader',
+            },
+          ],
+        },
       ],
     },
     plugins: [
