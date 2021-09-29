@@ -3,7 +3,7 @@ import useInitialState from './hooks/useInitialState';
 
 import Routes from './routes';
 
-import GlobalStyles from './styles/GlobalStyles';
+import GlobalStyles from './statics/styles/GlobalStyles';
 
 const App = () => {
   const initialState = useInitialState();

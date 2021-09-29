@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { loadingRing } from '../../styles/animations';
+import { loadingRing } from '../../statics/styles/animations';
 
 export const Wrapper = styled.section`
   width: 100%;

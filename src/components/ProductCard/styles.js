@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { fadeIn } from '../../styles/animations';
+import { fadeIn } from '../../statics/styles/animations';
 
 export const Article = styled.article`
   ${fadeIn({ time: '0.36s' })}
