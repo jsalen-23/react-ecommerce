@@ -7,12 +7,12 @@ export const Wrapper = styled.article`
   justify-content: flex-end;
   align-items: baseline;
   flex-wrap: wrap;
-  font-size: 16px;
-  margin: 0 8px;
+  margin: 12px 0;
 `;
 
 export const Title = styled.p`
   margin-right: 12px;
+  font-size: 17px;
   font-weight: 500;
 `;
 
