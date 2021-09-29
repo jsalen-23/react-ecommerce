@@ -3,17 +3,17 @@ import Button from '../Button';
 import { Article, CardTitle, CardPrice, ImageWrapper, Footer } from './styles';
 import { MdArrowForward } from 'react-icons/md';
 
-const ProductCard = ({ image, title, price }) => {
+const ProductCard = ({ handleAdd, product }) => {
   return (
     <Article>
       <ImageWrapper>
-        <img src={image} alt={title} />
+        <img src={product.image} alt={product.title} />
       </ImageWrapper>
       <Footer>
-        <CardTitle>{title}</CardTitle>
+        <CardTitle>{product.title}</CardTitle>
         <div>
-          <CardPrice>$ {price}</CardPrice>
-          <Button>
+          <CardPrice>$ {product.price}</CardPrice>
+          <Button onClick={handleAdd(product)}>
             Add to cart <MdArrowForward size='18' />
           </Button>
         </div>
