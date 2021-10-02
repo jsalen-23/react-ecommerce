@@ -1,5 +1,6 @@
 import { useContext } from 'react';
 import { AppContext } from '../../context/AppContext';
+import { useHistory } from 'react-router-dom';
 import Layout from '../../components/Layout';
 import CartAmount from '../../components/CartAmount';
 import CartEmpty from '../../components/CartEmpty';
@@ -10,6 +11,7 @@ import { MdArrowForward } from 'react-icons/md';
 import { Footer, BtnWrapper, DetailWrapper } from './styles';
 
 const Cart = () => {
+  const history = useHistory();
   const {
     state: {
       cart: { products },
@@ -41,7 +43,7 @@ const Cart = () => {
           </DetailWrapper>
           <Footer>
             <CartAmount />
-            <Button size='lg'>
+            <Button size='lg' onClick={() => history.push('/checkout')}>
               Checkout <MdArrowForward size='18' />
             </Button>
           </Footer>
