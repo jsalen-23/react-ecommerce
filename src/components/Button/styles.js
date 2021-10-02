@@ -19,6 +19,7 @@ const HEIGHT = {
 
 export const Btn = styled.button`
   width: ${(props) => SIZE[props.size] || SIZE['lg']};
+  max-width: ${(props) => (props.size === 'md' ? '190px' : '')};
   height: ${(props) => HEIGHT[props.size] || HEIGHT['lg']};
   margin: ${(props) => (props.size === 'md' ? '0 auto' : '0')};
   display: flex;
