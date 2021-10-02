@@ -1,60 +1,78 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import { AppContext } from '../../context/AppContext';
+import { useForm } from '../../hooks/useForm';
 import Button from '../Button';
+import ConfirmData from './ConfirmData';
+import ContactData from './ContactData';
+import PersonalData from './PersonalData';
+import ShippingData from './ShippingData';
 
-import { Wrapper, FormGroup } from './styles';
+import { Header, ButtonWrapper } from './styles';
 
 const UserForm = () => {
+  const history = useHistory();
   const { addBuyer } = useContext(AppContext);
+  const initialState = {
+    name: '',
+    lastName: '',
+    email: '',
+    country: '',
+    city: '',
+    address: '',
+    zip: '',
+    phone: '',
+  };
+  const [state, onChange] = useForm(initialState);
+  const { name, lastName, email, country, city, address, zip, phone } = state;
+  const [step, setStep] = useState(1);
+
+  const handleBack = (e) => {
+    e.preventDefault();
+    if (step === 1) return history.push('/cart');
+
+    setStep(step - 1);
+  };
+
+  const handleNext = (e) => {
+    e.preventDefault();
+    if (step === 4) {
+      console.log(state);
+    } else {
+      setStep(step + 1);
+    }
+  };
 
   return (
-    <Wrapper>
+    <>
+      <Header>Step: {step}/3</Header>
       <form>
-        <FormGroup>
-          <label htmlFor='name'>Name:</label>
-          <input type='text' name='name' id='name' required />
-        </FormGroup>
-        <FormGroup>
-          <label htmlFor='last-name'>Last Name:</label>
-          <input type='text' name='last-name' id='last-name' required />
-        </FormGroup>
-        <FormGroup>
-          <label htmlFor='email'>Email:</label>
-          <input type='email' name='email' id='email' required />
-          <label htmlFor='country'>Country:</label>
-          <select name='country' id='country'>
-            <option value='' hidden defaultValue>
-              Select Country
-            </option>
-            <option value='Argentina'>Argentina</option>
-            <option value='Chile'>Chile</option>
-            <option value='Colombia'>Colombia</option>
-            <option value='Peru'>Peru</option>
-            <option value='Venezuela'>Venezuela</option>
-          </select>
-        </FormGroup>
-        <FormGroup>
-          <label htmlFor='city'>City:</label>
-          <input type='text' name='city' id='city' required />
-          <label htmlFor='address'>Address:</label>
-          <input type='text' name='address' id='address' required />
-        </FormGroup>
-        <FormGroup>
-          <label htmlFor='zip'>Zip Code:</label>
-          <input type='number' name='zip' id='zip' required />
-          <label htmlFor='phone'>Phone Number:</label>
-          <input type='text' name='phone' id='phone' required />
-        </FormGroup>
+        {step === 1 && (
+          <PersonalData name={name} lastName={lastName} onChange={onChange} />
+        )}
+        {step === 2 && (
+          <ContactData email={email} phone={phone} onChange={onChange} />
+        )}
+        {step === 3 && (
+          <ShippingData
+            address={address}
+            country={country}
+            city={city}
+            zip={zip}
+            onChange={onChange}
+          />
+        )}
+        {step === 4 && <ConfirmData {...state} />}
+        <ButtonWrapper>
+          <Button size='md' variant='warning' onClick={handleBack}>
+            {step === 1 ? 'Cancel' : 'Back'}
+          </Button>
+          <Button size='md' variant='primary' onClick={handleNext}>
+            {step === 4 ? 'Submit' : 'Next'}
+          </Button>
+        </ButtonWrapper>
       </form>
-      <div>
-        <Button size='md' variant='warning'>
-          Back
-        </Button>
-        <Button size='md' variant='primary'>
-          Submit
-        </Button>
-      </div>
-    </Wrapper>
+    </>
   );
 };
 
