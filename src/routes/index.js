@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Header from '../components/Header';
 import Navigation from '../components/Navigation';
 import Cart from '../pages/Cart';
+import Checkout from '../pages/Checkout';
 import Home from '../pages/Home';
 import User from '../pages/User';
 
@@ -14,6 +15,7 @@ const Routes = () => {
         <Route exact path='/' component={Home} />
         <Route exact path='/cart' component={Cart} />
         <Route exact path='/user' component={User} />
+        <Route exact path='/checkout' component={Checkout} />
       </Switch>
       <Navigation />
     </Router>
