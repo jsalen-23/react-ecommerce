@@ -43,6 +43,12 @@ const UserForm = () => {
     }
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    addBuyer(state);
+    history.push('/checkout/payment');
+  };
+
   return (
     <>
       <Header>Step: {step}/3</Header>
@@ -67,7 +73,11 @@ const UserForm = () => {
           <Button size='md' variant='warning' onClick={handleBack}>
             {step === 1 ? 'Cancel' : 'Back'}
           </Button>
-          <Button size='md' variant='primary' onClick={handleNext}>
+          <Button
+            size='md'
+            variant='primary'
+            onClick={step === 4 ? handleSubmit : handleNext}
+          >
             {step === 4 ? 'Submit' : 'Next'}
           </Button>
         </ButtonWrapper>
