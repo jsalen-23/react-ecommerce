@@ -1,16 +1,19 @@
 import { useContext } from 'react';
+import { useHistory } from 'react-router-dom';
 import { AppContext } from '../../context/AppContext';
 import { PayPalButton } from 'react-paypal-button-v2';
 
 import { Wrapper, Description, Title, Label } from './styles';
 
 const Paypal = () => {
+  const history = useHistory();
   const PP_ID = process.env.PP_CLIENT_ID;
   const {
     state: {
       cart: { total },
     },
   } = useContext(AppContext);
+  const fixedAmount = total.toFixed(2);
   const paypalOptions = {
     clientId: PP_ID,
     intent: 'capture',
@@ -25,15 +28,17 @@ const Paypal = () => {
   return (
     <Wrapper>
       <Description>
-        <Title>Your total amount is $ {total.toFixed(2)}</Title>
+        <Title>Your total amount is $ {fixedAmount}</Title>
         <Label>Please, select your payment method:</Label>
       </Description>
       <PayPalButton
-        amount={total.toFixed(2)}
+        amount={fixedAmount}
         options={paypalOptions}
         style={paypalStyles}
-        onCancel={() => console.log('order canceled')}
-        onSuccess={() => console.log('order completed')}
+        onCancel={() => history.push('/checkout/payment/fail')}
+        onSuccess={(details, data) =>
+          history.push(`/checkout/payment/success/${data.orderID}`)
+        }
       />
     </Wrapper>
   );
