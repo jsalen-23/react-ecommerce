@@ -29,6 +29,7 @@ module.exports = (env, args) => {
         {
           test: /\.js$/,
           loader: 'babel-loader',
+          exclude: path.resolve(__dirname, 'node_modules/'),
           options: {
             presets: [
               [
