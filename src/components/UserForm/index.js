@@ -36,11 +36,7 @@ const UserForm = () => {
 
   const handleNext = (e) => {
     e.preventDefault();
-    if (step === 4) {
-      console.log(state);
-    } else {
-      setStep(step + 1);
-    }
+    setStep(step + 1);
   };
 
   const handleSubmit = (e) => {
