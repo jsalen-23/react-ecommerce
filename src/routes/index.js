@@ -6,6 +6,7 @@ import Cart from '../pages/Cart';
 import Checkout from '../pages/Checkout';
 import Home from '../pages/Home';
 import Payment from '../pages/Payment';
+import PaymentResult from '../pages/PaymentResult';
 import User from '../pages/User';
 
 const Routes = () => {
@@ -18,6 +19,12 @@ const Routes = () => {
         <Route exact path='/user' component={User} />
         <Route exact path='/checkout' component={Checkout} />
         <Route exact path='/checkout/payment' component={Payment} />
+        <Route
+          exact
+          path='/checkout/payment/success/:orderID'
+          component={PaymentResult}
+        />
+        <Route exact path='/checkout/payment/fail' component={PaymentResult} />
       </Switch>
       <Navigation />
     </Router>
