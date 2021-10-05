@@ -56,7 +56,7 @@ module.exports = (env, args) => {
         template: 'public/index.html',
       }),
       new DotEnvWebPackPlugin({
-        path: './.env',
+        path: path.resolve(__dirname, '.env'),
         safe: true,
         systemvars: true,
         defaults: false,
