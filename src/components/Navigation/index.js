@@ -1,5 +1,5 @@
 import { Nav, Link } from './styles';
-import { MdHome, MdShoppingCart, MdPerson } from 'react-icons/md';
+import { MdHome, MdShoppingCart, MdFavorite } from 'react-icons/md';
 
 const Navigation = () => {
   return (
@@ -10,8 +10,8 @@ const Navigation = () => {
       <Link exact to='/cart'>
         <MdShoppingCart />
       </Link>
-      <Link exact to='/user'>
-        <MdPerson />
+      <Link exact to='/favorites'>
+        <MdFavorite />
       </Link>
     </Nav>
   );
