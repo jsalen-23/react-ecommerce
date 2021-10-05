@@ -7,7 +7,6 @@ import Checkout from '../pages/Checkout';
 import Home from '../pages/Home';
 import Payment from '../pages/Payment';
 import PaymentResult from '../pages/PaymentResult';
-import User from '../pages/User';
 
 const Routes = () => {
   return (
@@ -16,7 +15,6 @@ const Routes = () => {
       <Switch>
         <Route exact path='/' component={Home} />
         <Route exact path='/cart' component={Cart} />
-        <Route exact path='/user' component={User} />
         <Route exact path='/checkout' component={Checkout} />
         <Route exact path='/checkout/payment' component={Payment} />
         <Route
