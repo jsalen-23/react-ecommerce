@@ -66,10 +66,10 @@ const useInitialState = () => {
     setCategory(payload);
   };
 
-  const addToHistory = (payload) => {
+  const addToFavorites = (payload) => {
     setState({
       ...state,
-      history: [...state.history, payload],
+      favorites: [...state.favorites, payload],
     });
   };
 
@@ -84,7 +84,7 @@ const useInitialState = () => {
     removeFromCart,
     changeCategory,
     category,
-    addToHistory,
+    addToFavorites,
   };
 };
 
