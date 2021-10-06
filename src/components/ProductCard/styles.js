@@ -12,6 +12,13 @@ export const Article = styled.article`
 export const ImageWrapper = styled.div`
   width: 100%;
   height: 100%;
+  position: relative;
+
+  & svg {
+    position: absolute;
+    right: 1rem;
+    top: 0.5rem;
+  }
 
   & img {
     width: 100%;
