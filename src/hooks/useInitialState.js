@@ -65,13 +65,6 @@ const useInitialState = () => {
     });
   };
 
-  const addNewOrder = (payload) => {
-    setState({
-      ...state,
-      orders: [...state.orders, payload],
-    });
-  };
-
   const changeCategory = (payload) => {
     setCategory(payload);
   };
@@ -96,7 +89,6 @@ const useInitialState = () => {
     loading,
     error,
     addBuyer,
-    addNewOrder,
     addToCart,
     removeFromCart,
     changeCategory,
