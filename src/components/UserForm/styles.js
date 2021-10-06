@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { fadeIn } from '../../statics/styles/animations';
 
 export const FormGroup = styled.div`
   width: 100%;
@@ -8,6 +9,7 @@ export const FormGroup = styled.div`
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
+  ${fadeIn({ time: '0.2s' })}
 
   & input,
   select {
@@ -41,6 +43,14 @@ export const Header = styled.h3`
   font-weight: 700;
   text-align: center;
   margin: 0 auto 20px;
+`;
+
+export const Label = styled.h4`
+  margin: 0 auto 20px;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  color: #b5b5b5;
 `;
 
 export const Confirmation = styled.p`
