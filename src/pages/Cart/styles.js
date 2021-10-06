@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { fadeIn } from '../../statics/styles/animations';
 
 export const Footer = styled.footer`
   height: 112px;
@@ -17,5 +18,6 @@ export const BtnWrapper = styled.div`
 `;
 
 export const DetailWrapper = styled.div`
+  ${fadeIn({ time: '0.36s' })}
   padding-bottom: 100px;
 `;
