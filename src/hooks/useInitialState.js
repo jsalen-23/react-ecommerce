@@ -73,6 +73,13 @@ const useInitialState = () => {
     });
   };
 
+  const removeFromFavorites = (payload) => {
+    setState({
+      ...state,
+      favorites: state.favorites.filter((item) => item.id !== payload.id),
+    });
+  };
+
   return {
     state,
     products,
@@ -85,6 +92,7 @@ const useInitialState = () => {
     changeCategory,
     category,
     addToFavorites,
+    removeFromFavorites,
   };
 };
 
