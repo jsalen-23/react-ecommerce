@@ -3,12 +3,13 @@ import { AppContext } from '../../context/AppContext';
 import { useHistory } from 'react-router-dom';
 import Layout from '../../components/Layout';
 import CartAmount from '../../components/CartAmount';
-import CartEmpty from '../../components/CartEmpty';
+import Empty from '../../components/Empty';
 import DetailCard from '../../components/DetailCard';
 import Button from '../../components/Button';
 
 import { MdArrowForward } from 'react-icons/md';
 import { Footer, BtnWrapper, DetailWrapper } from './styles';
+import emptyCart from '../../statics/images/empty-cart.png';
 
 const Cart = () => {
   const history = useHistory();
@@ -22,7 +23,7 @@ const Cart = () => {
   return (
     <Layout title='Cart'>
       {products.length === 0 ? (
-        <CartEmpty />
+        <Empty icon={emptyCart} title='There is nothing in your cart.' />
       ) : (
         <>
           <DetailWrapper>
