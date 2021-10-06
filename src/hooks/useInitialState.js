@@ -48,6 +48,16 @@ const useInitialState = () => {
     });
   };
 
+  const clearCart = () => {
+    setState({
+      ...state,
+      cart: {
+        products: [],
+        total: 0,
+      },
+    });
+  };
+
   const addBuyer = (payload) => {
     setState({
       ...state,
@@ -93,6 +103,7 @@ const useInitialState = () => {
     category,
     addToFavorites,
     removeFromFavorites,
+    clearCart,
   };
 };
 
