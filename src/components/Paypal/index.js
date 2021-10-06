@@ -12,6 +12,7 @@ const Paypal = () => {
     state: {
       cart: { total },
     },
+    clearCart,
   } = useContext(AppContext);
   const fixedAmount = total.toFixed(2);
   const paypalOptions = {
@@ -25,6 +26,11 @@ const Paypal = () => {
     label: 'pay',
   };
 
+  const success = (details, data) => {
+    clearCart();
+    history.push(`/checkout/payment/success/${data.orderID}`);
+  };
+
   return (
     <Wrapper>
       <Description>
@@ -36,9 +42,7 @@ const Paypal = () => {
         options={paypalOptions}
         style={paypalStyles}
         onCancel={() => history.push('/checkout/payment/fail')}
-        onSuccess={(details, data) =>
-          history.push(`/checkout/payment/success/${data.orderID}`)
-        }
+        onSuccess={(details, data) => success(details, data)}
       />
     </Wrapper>
   );
