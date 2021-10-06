@@ -1,9 +1,11 @@
 import useAutoFocus from '../../hooks/useAutoFocus';
-import { FormGroup } from './styles';
+import { FormGroup, Label } from './styles';
+
 const PersonalData = ({ name, lastName, onChange }) => {
   const [input] = useAutoFocus();
   return (
     <>
+      <Label>Personal Information</Label>
       <FormGroup>
         <label htmlFor='name'>Name:</label>
         <input

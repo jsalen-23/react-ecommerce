@@ -1,9 +1,10 @@
 import useAutoFocus from '../../hooks/useAutoFocus';
-import { FormGroup } from './styles';
+import { FormGroup, Label } from './styles';
 const ContactData = ({ email, phone, onChange }) => {
   const [input] = useAutoFocus();
   return (
     <>
+      <Label>Contact Information</Label>
       <FormGroup>
         <label htmlFor='email'>Email:</label>
         <input

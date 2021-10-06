@@ -1,8 +1,9 @@
-import { FormGroup } from './styles';
+import { FormGroup, Label } from './styles';
 
 const ShippingData = ({ address, country, city, zip, onChange }) => {
   return (
     <>
+      <Label>Shipping Information</Label>
       <FormGroup>
         <label htmlFor='country'>Country:</label>
         <select name='country' id='country' required onChange={onChange}>

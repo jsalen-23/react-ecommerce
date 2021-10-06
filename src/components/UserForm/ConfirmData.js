@@ -1,4 +1,4 @@
-import { InfoCard, InfoLabel } from './styles';
+import { InfoCard, InfoLabel, Label } from './styles';
 
 const ConfirmData = ({
   name,
@@ -12,7 +12,7 @@ const ConfirmData = ({
 }) => {
   return (
     <>
-      <h3>Please, confirm your data:</h3>
+      <Label>Please, confirm your data:</Label>
       <InfoCard>
         <InfoLabel>
           Full Name: <span>{`${name} ${lastName}`}</span>
