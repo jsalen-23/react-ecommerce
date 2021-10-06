@@ -21,6 +21,7 @@ export const Nav = styled.nav`
 export const Link = styled(LinkRouter)`
   width: 100%;
   height: 100%;
+  position: relative;
   display: inline-flex;
   justify-content: center;
   align-items: center;
