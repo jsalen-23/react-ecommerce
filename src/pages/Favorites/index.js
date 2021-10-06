@@ -1,9 +1,10 @@
 import Layout from '../../components/Layout';
+import ListOfFavorites from '../../components/ListOfFavorites';
 
 const Favorites = () => {
   return (
     <Layout title='Your favorites'>
-      <h1>Favorites</h1>
+      <ListOfFavorites />
     </Layout>
   );
 };
