@@ -1,14 +1,16 @@
-import { useContext, useState } from 'react';
+import { useContext, useState, lazy, Suspense } from 'react';
 import { useHistory } from 'react-router-dom';
 import { AppContext } from '../../context/AppContext';
 import { useForm } from '../../hooks/useForm';
 import Button from '../Button';
-import ConfirmData from './ConfirmData';
-import ContactData from './ContactData';
-import PersonalData from './PersonalData';
-import ShippingData from './ShippingData';
+import Loading from '../Loading';
 
 import { Header, ButtonWrapper } from './styles';
+
+const ConfirmData = lazy(() => import('./ConfirmData'));
+const ContactData = lazy(() => import('./ContactData'));
+const PersonalData = lazy(() => import('./PersonalData'));
+const ShippingData = lazy(() => import('./ShippingData'));
 
 const UserForm = () => {
   const history = useHistory();
@@ -47,37 +49,39 @@ const UserForm = () => {
 
   return (
     <>
-      <Header>Step: {step}/3</Header>
-      <form>
-        {step === 1 && (
-          <PersonalData name={name} lastName={lastName} onChange={onChange} />
-        )}
-        {step === 2 && (
-          <ContactData email={email} phone={phone} onChange={onChange} />
-        )}
-        {step === 3 && (
-          <ShippingData
-            address={address}
-            country={country}
-            city={city}
-            zip={zip}
-            onChange={onChange}
-          />
-        )}
-        {step === 4 && <ConfirmData {...state} />}
-        <ButtonWrapper>
-          <Button size='md' variant='warning' onClick={handleBack}>
-            {step === 1 ? 'Cancel' : 'Back'}
-          </Button>
-          <Button
-            size='md'
-            variant='primary'
-            onClick={step === 4 ? handleSubmit : handleNext}
-          >
-            {step === 4 ? 'Submit' : 'Next'}
-          </Button>
-        </ButtonWrapper>
-      </form>
+      <Suspense fallback={<Loading />}>
+        <Header>Step: {step}/3</Header>
+        <form>
+          {step === 1 && (
+            <PersonalData name={name} lastName={lastName} onChange={onChange} />
+          )}
+          {step === 2 && (
+            <ContactData email={email} phone={phone} onChange={onChange} />
+          )}
+          {step === 3 && (
+            <ShippingData
+              address={address}
+              country={country}
+              city={city}
+              zip={zip}
+              onChange={onChange}
+            />
+          )}
+          {step === 4 && <ConfirmData {...state} />}
+          <ButtonWrapper>
+            <Button size='md' variant='warning' onClick={handleBack}>
+              {step === 1 ? 'Cancel' : 'Back'}
+            </Button>
+            <Button
+              size='md'
+              variant='primary'
+              onClick={step === 4 ? handleSubmit : handleNext}
+            >
+              {step === 4 ? 'Submit' : 'Next'}
+            </Button>
+          </ButtonWrapper>
+        </form>
+      </Suspense>
     </>
   );
 };
