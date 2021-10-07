@@ -28,6 +28,7 @@
     "axios": "^0.21.4",
     "dotenv": "^10.0.0",
     "dotenv-webpack": "^7.0.3",
+    "intersection-observer": "^0.12.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-helmet": "^6.1.0",
