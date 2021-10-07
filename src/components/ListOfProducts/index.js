@@ -11,15 +11,17 @@ const ListOfProducts = () => {
   if (error) return <Error />;
 
   return (
-    <Wrapper>
+    <>
       {loading ? (
         <Loading />
       ) : (
-        products.map((product) => (
-          <ProductCard key={product.id} product={product} />
-        ))
+        <Wrapper>
+          {products.map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))}
+        </Wrapper>
       )}
-    </Wrapper>
+    </>
   );
 };
 
