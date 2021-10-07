@@ -6,8 +6,8 @@ export const Wrapper = styled.div`
   margin: 16px 8px 76px;
 
   @media ${device.laptop} {
-    margin-left: 88px;
-    padding-left: 20px;
+    margin: 60px 0 0 88px;
+    padding: 20px 0 0 20px;
   }
 
   @media ${device.laptopL} {
