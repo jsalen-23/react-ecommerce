@@ -70,6 +70,10 @@ export const Link = styled(LinkRouter)`
     &[aria-current] {
       border-right: 1px solid rgba(29, 155, 240, 0.6);
       border-top: none;
+
+      &:after {
+        content: '';
+      }
     }
   }
 `;

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { device } from '../../mediaQuery';
 
 export const Wrapper = styled.div`
   width: 24px;
@@ -17,4 +18,9 @@ export const Wrapper = styled.div`
   color: #fff;
   border: 1px solid #2c3841;
   box-shadow: 0px 0 4px 0px rgb(156 156 156 / 69%);
+
+  @media ${device.laptop} {
+    right: 12px;
+    top: 8px;
+  }
 `;
