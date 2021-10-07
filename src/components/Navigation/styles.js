@@ -31,6 +31,10 @@ export const Nav = styled.nav`
     border-right: 1px solid #2c3841;
     border-top: none;
   }
+
+  @media ${device.laptopL} {
+    min-width: 360px;
+  }
 `;
 
 export const Link = styled(LinkRouter)`
