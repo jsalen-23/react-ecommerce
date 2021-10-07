@@ -2,10 +2,13 @@ import { useContext } from 'react';
 import { AppContext } from '../../context/AppContext';
 import Button from '../Button';
 
+import useNearScreen from '../../hooks/useNearScreen';
+
 import { Article, CardTitle, CardPrice, ImageWrapper, Footer } from './styles';
 import { MdArrowForward, MdFavoriteBorder, MdFavorite } from 'react-icons/md';
 
 const ProductCard = ({ product }) => {
+  const [show, ref] = useNearScreen();
   const {
     state: { favorites },
     addToCart,
@@ -28,20 +31,24 @@ const ProductCard = ({ product }) => {
   };
 
   return (
-    <Article>
-      <ImageWrapper>
-        {checkFavorites(product)}
-        <img src={product.image} alt={product.title} />
-      </ImageWrapper>
-      <Footer>
-        <CardTitle>{product.title}</CardTitle>
-        <div>
-          <CardPrice>$ {product.price}</CardPrice>
-          <Button onClick={() => addToCart(product)}>
-            Add to cart <MdArrowForward size='18' />
-          </Button>
-        </div>
-      </Footer>
+    <Article ref={ref}>
+      {show && (
+        <>
+          <ImageWrapper>
+            {checkFavorites(product)}
+            <img src={product.image} alt={product.title} loading='lazy' />
+          </ImageWrapper>
+          <Footer>
+            <CardTitle>{product.title}</CardTitle>
+            <div>
+              <CardPrice>$ {product.price}</CardPrice>
+              <Button onClick={() => addToCart(product)}>
+                Add to cart <MdArrowForward size='18' />
+              </Button>
+            </div>
+          </Footer>
+        </>
+      )}
     </Article>
   );
 };
