@@ -3,7 +3,8 @@ import { fadeIn } from '../../statics/styles/animations';
 
 export const Article = styled.article`
   ${fadeIn({ time: '0.36s' })}
-  max-width: 400px;
+  max-width: 390px;
+  min-width: 375px;
   min-height: 400px;
   margin: 12px 0;
   border: 2px solid #2c3841;
@@ -12,7 +13,6 @@ export const Article = styled.article`
 
 export const ImageWrapper = styled.div`
   width: 100%;
-  height: 100%;
   position: relative;
 
   & svg {
@@ -34,7 +34,7 @@ export const ImageWrapper = styled.div`
 
 export const Footer = styled.footer`
   width: 100%;
-  height: 100%;
+  min-height: 176px;
   display: grid;
   padding: 16px;
   grid-template-rows: 1fr auto;
