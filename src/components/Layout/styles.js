@@ -9,4 +9,8 @@ export const Wrapper = styled.div`
     margin-left: 88px;
     padding-left: 20px;
   }
+
+  @media ${device.laptopL} {
+    margin-left: 360px;
+  }
 `;
