@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Link as LinkRouter } from 'react-router-dom';
+import { device } from '../../mediaQuery';
 
 export const Wrapper = styled.header`
   width: 100%;
@@ -10,6 +11,11 @@ export const Wrapper = styled.header`
   padding: 0 18px;
   border-bottom: 1px solid #2c3841;
   background-color: #10161d;
+
+  @media ${device.laptop} {
+    position: fixed;
+    z-index: 3;
+  }
 `;
 
 export const Link = styled(LinkRouter)`
