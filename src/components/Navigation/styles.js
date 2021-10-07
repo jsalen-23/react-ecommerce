@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 import { NavLink as LinkRouter } from 'react-router-dom';
 import { fadeIn } from '../../statics/styles/animations';
+import { device } from '../../mediaQuery';
 
 export const Nav = styled.nav`
   width: 100%;
-  max-width: 500px;
+  max-width: 768px;
   height: 60px;
   display: flex;
   justify-content: center;
@@ -16,11 +17,26 @@ export const Nav = styled.nav`
   border-top: 1px solid #2c3841;
   background-color: #10161d;
   z-index: 3;
+
+  @media ${device.tablet} {
+    height: 80px;
+  }
+
+  @media ${device.laptop} {
+    width: 88px;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: flex-start;
+    top: 58px;
+    border-right: 1px solid #2c3841;
+    border-top: none;
+  }
 `;
 
 export const Link = styled(LinkRouter)`
   width: 100%;
   height: 100%;
+  max-height: 80px;
   position: relative;
   display: inline-flex;
   justify-content: center;
@@ -43,6 +59,13 @@ export const Link = styled(LinkRouter)`
       bottom: 0;
       font-size: 34px;
       line-height: 20px;
+    }
+  }
+
+  @media ${device.laptop} {
+    &[aria-current] {
+      border-right: 1px solid rgba(29, 155, 240, 0.6);
+      border-top: none;
     }
   }
 `;
