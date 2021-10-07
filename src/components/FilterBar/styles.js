@@ -1,9 +1,11 @@
 import styled from 'styled-components';
+import { device } from '../../mediaQuery';
 
 export const Wrapper = styled.div`
   width: 100%;
   max-width: 500px;
   height: 40px;
+  margin: 0 auto;
   margin-bottom: 16px;
 `;
 
