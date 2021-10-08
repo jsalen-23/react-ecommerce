@@ -11,6 +11,6 @@ export const Wrapper = styled.div`
   }
 
   @media ${device.laptopL} {
-    margin-left: 360px;
+    margin-left: 210px;
   }
 `;
