@@ -33,7 +33,7 @@ export const Nav = styled.nav`
   }
 
   @media ${device.laptopL} {
-    min-width: 360px;
+    min-width: 210px;
   }
 `;
 
@@ -74,6 +74,16 @@ export const Link = styled(LinkRouter)`
       &:after {
         content: '';
       }
+    }
+  }
+
+  @media ${device.laptopL} {
+    width: 100%;
+    padding-left: 28px;
+    display: flex;
+    justify-content: flex-start;
+    svg {
+      margin-right: 16px;
     }
   }
 `;
