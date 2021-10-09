@@ -29,6 +29,7 @@ const useInitialState = () => {
   }, [category]);
 
   const addToCart = (payload) => {
+    if (state.cart.products.includes(payload)) return { ...state };
     setState({
       ...state,
       cart: {
