@@ -40,4 +40,8 @@ export const Btn = styled.button`
   &:hover {
     cursor: pointer;
   }
+
+  &:active {
+    transform: scale(0.9);
+  }
 `;
