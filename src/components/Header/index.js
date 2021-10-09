@@ -6,7 +6,7 @@ const PROFILE_IMG =
 const Header = () => {
   return (
     <Wrapper>
-      <Link to='/'>Salen Storexd</Link>
+      <Link to='/'>Salen Store</Link>
     </Wrapper>
   );
 };
