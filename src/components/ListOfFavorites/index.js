@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { AppContext } from '../../context/AppContext';
 import Empty from '../Empty';
-import emptyIcon from '../../statics/images/no-favs.png';
+import { noFavs as emptyIcon } from '../../statics/images';
 import ProductCard from '../ProductCard';
 
 const ListOfFavorites = () => {

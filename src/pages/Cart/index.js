@@ -3,7 +3,7 @@ import { AppContext } from '../../context/AppContext';
 import { useHistory } from 'react-router-dom';
 import Layout from '../../components/Layout';
 import Loading from '../../components/Loading';
-import emptyCart from '../../statics/images/empty-cart.png';
+import { emptyCart } from '../../statics/images';
 
 import { MdArrowForward } from 'react-icons/md';
 import { Footer, BtnWrapper, DetailWrapper } from './styles';

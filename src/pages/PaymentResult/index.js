@@ -4,8 +4,8 @@ import { useParams, Link } from 'react-router-dom';
 import Button from '../../components/Button';
 import Layout from '../../components/Layout';
 
-import okIcon from '../../statics/images/ok.png';
-import failIcon from '../../statics/images/no-data.png';
+import { ok as okIcon } from '../../statics/images';
+import { noData as failIcon } from '../../statics/images';
 import { Wrapper } from './styles';
 
 const Success = () => {
