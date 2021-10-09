@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { fadeIn } from '../../statics/styles/animations';
+import { device } from '../../mediaQuery';
 
 export const FormGroup = styled.div`
   width: 100%;
@@ -35,7 +36,8 @@ export const ButtonWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   max-width: 410px;
-  margin-top: 6px;
+  margin: 0 auto;
+  margin-top: 24px;
 `;
 
 export const Header = styled.h3`

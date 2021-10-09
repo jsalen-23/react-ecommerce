@@ -8,5 +8,6 @@ export const Wrapper = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin: 0 auto;
   margin-top: 30px;
 `;

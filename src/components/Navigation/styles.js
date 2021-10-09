@@ -79,9 +79,10 @@ export const Link = styled(LinkRouter)`
 
   @media ${device.laptopL} {
     width: 100%;
-    padding-left: 28px;
+    padding-left: 64px;
     display: flex;
     justify-content: flex-start;
+    font-size: 18px;
     svg {
       margin-right: 16px;
     }

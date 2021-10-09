@@ -19,6 +19,11 @@ export const ImageWrapper = styled.div`
     position: absolute;
     right: 1rem;
     top: 0.5rem;
+    color: #15202b;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   & img {

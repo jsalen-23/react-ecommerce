@@ -36,4 +36,8 @@ export const Btn = styled.button`
   & svg {
     margin-left: 4px;
   }
+
+  &:hover {
+    cursor: pointer;
+  }
 `;
