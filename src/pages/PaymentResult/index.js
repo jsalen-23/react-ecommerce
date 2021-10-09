@@ -43,7 +43,7 @@ const PaymentResult = () => {
   const { orderID } = useParams();
 
   return (
-    <Layout>
+    <Layout title={`Order ${orderID ? 'Completed' : 'Failed'}`}>
       <Wrapper>
         {orderID ? <Success /> : <Fail />}
         <Button size='md'>
