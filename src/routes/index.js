@@ -9,6 +9,8 @@ import Favorites from '../pages/Favorites';
 import NotFound from '../pages/NotFound';
 import Payment from '../pages/Payment';
 import PaymentResult from '../pages/PaymentResult';
+import ProductDetails from '../components/ProductDetails';
+import Product from '../pages/Product';
 
 const Routes = () => {
   return (
@@ -26,6 +28,7 @@ const Routes = () => {
           component={PaymentResult}
         />
         <Route exact path='/checkout/payment/fail' component={PaymentResult} />
+        <Route exact path='/product/:productID' component={Product} />
         <Route component={NotFound} />
       </Switch>
       <Navigation />
