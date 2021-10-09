@@ -70,9 +70,13 @@ const useInitialState = () => {
   };
 
   const addToFavorites = (payload) => {
+    if (state.favorites.includes(payload)) return { ...state };
     setState({
       ...state,
-      favorites: [...state.favorites, payload],
+      favorites: [
+        ...state.favorites.filter((item) => item.id !== payload.id),
+        payload,
+      ],
     });
   };
 
