@@ -13,6 +13,7 @@ export const Wrapper = styled.header`
   background-color: #10161d;
 
   @media ${device.laptop} {
+    padding-right: 42px;
     position: fixed;
     z-index: 3;
   }
