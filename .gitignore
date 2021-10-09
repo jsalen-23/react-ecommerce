@@ -11,8 +11,6 @@ logs
 node_modules
 bower_components
 
-images
-
 .env
 .vscode
 
