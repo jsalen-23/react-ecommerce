@@ -4,6 +4,8 @@ import Empty from '../Empty';
 import { noFavs as emptyIcon } from '../../statics/images';
 import ProductCard from '../ProductCard';
 
+import { Wrapper } from './styles';
+
 const ListOfFavorites = () => {
   const {
     state: { favorites },
@@ -14,9 +16,11 @@ const ListOfFavorites = () => {
       {favorites.length === 0 ? (
         <Empty icon={emptyIcon} title='Your favorites list is empty' />
       ) : (
-        favorites.map((product) => (
-          <ProductCard key={product.id} product={product} />
-        ))
+        <Wrapper>
+          {favorites.map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))}
+        </Wrapper>
       )}
     </>
   );
