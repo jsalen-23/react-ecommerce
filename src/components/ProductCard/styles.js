@@ -15,21 +15,6 @@ export const ImageWrapper = styled.div`
   width: 100%;
   position: relative;
 
-  & svg {
-    position: absolute;
-    right: 1rem;
-    top: 0.5rem;
-    color: #15202b;
-
-    &:hover {
-      cursor: pointer;
-    }
-
-    &:active {
-      transform: scale(0.9);
-    }
-  }
-
   & img {
     width: 100%;
     max-width: ${(props) => (props.details ? '100%' : '425px')};
@@ -42,6 +27,7 @@ export const ImageWrapper = styled.div`
 `;
 
 export const Footer = styled.footer`
+  position: relative;
   width: 100%;
   min-height: 176px;
   display: grid;
@@ -52,6 +38,21 @@ export const Footer = styled.footer`
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
+  }
+
+  & > svg {
+    position: absolute;
+    right: 1rem;
+    top: 0.5rem;
+    color: #1d9bf0;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:active {
+      transform: scale(0.9);
+    }
   }
 `;
 

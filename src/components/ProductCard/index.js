@@ -43,10 +43,10 @@ const ProductCard = ({ product, details }) => {
       {show && (
         <>
           <ImageWrapper details={details}>
-            {checkFavorites(product)}
             <img src={product.image} alt={product.title} loading='lazy' />
           </ImageWrapper>
           <Footer>
+            {checkFavorites(product)}
             <Link to={`/product/${product.id}`}>
               <CardTitle>{product.title}</CardTitle>
             </Link>
