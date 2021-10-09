@@ -30,8 +30,8 @@ const Cart = () => {
         ) : (
           <>
             <DetailWrapper>
-              {products.map((product) => (
-                <div key={product.id}>
+              {products.map((product, idx) => (
+                <div key={idx}>
                   <DetailCard {...product} />
                   <BtnWrapper>
                     <Button
