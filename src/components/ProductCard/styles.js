@@ -3,7 +3,7 @@ import { fadeIn } from '../../statics/styles/animations';
 
 export const Article = styled.article`
   ${fadeIn({ time: '0.36s' })}
-  max-width: 390px;
+  max-width: ${(props) => (props.details ? '768px' : '390px')};
   min-width: 320px;
   min-height: 400px;
   margin: 12px 0;
@@ -24,12 +24,16 @@ export const ImageWrapper = styled.div`
     &:hover {
       cursor: pointer;
     }
+
+    &:active {
+      transform: scale(0.9);
+    }
   }
 
   & img {
     width: 100%;
-    max-width: 425px;
-    max-height: 260px;
+    max-width: ${(props) => (props.details ? '100%' : '425px')};
+    max-height: ${(props) => (props.details ? '50vh' : '260px')};
     box-shadow: 0px 0px 5px 2px rgb(44 56 65 / 50%);
     border-radius: 4px;
     object-fit: cover;
@@ -42,7 +46,7 @@ export const Footer = styled.footer`
   min-height: 176px;
   display: grid;
   padding: 16px;
-  grid-template-rows: 1fr auto;
+  grid-template-rows: ${(props) => (props.details ? '1f 1f auto' : '1fr auto')};
 
   & div {
     display: grid;
@@ -64,4 +68,9 @@ export const CardPrice = styled.p`
   font-size: 22px;
   font-weight: 400;
   color: #b5b5b5;
+`;
+
+export const CardDescription = styled.p`
+  min-width: 320px;
+  margin-bottom: 16px;
 `;

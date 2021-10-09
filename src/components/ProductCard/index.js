@@ -1,13 +1,21 @@
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { AppContext } from '../../context/AppContext';
 import Button from '../Button';
 
 import useNearScreen from '../../hooks/useNearScreen';
 
-import { Article, CardTitle, CardPrice, ImageWrapper, Footer } from './styles';
+import {
+  Article,
+  CardTitle,
+  CardPrice,
+  CardDescription,
+  ImageWrapper,
+  Footer,
+} from './styles';
 import { MdArrowForward, MdFavoriteBorder, MdFavorite } from 'react-icons/md';
 
-const ProductCard = ({ product }) => {
+const ProductCard = ({ product, details }) => {
   const [show, ref] = useNearScreen();
   const {
     state: { favorites },
@@ -31,15 +39,20 @@ const ProductCard = ({ product }) => {
   };
 
   return (
-    <Article ref={ref}>
+    <Article details={details} ref={ref}>
       {show && (
         <>
-          <ImageWrapper>
+          <ImageWrapper details={details}>
             {checkFavorites(product)}
             <img src={product.image} alt={product.title} loading='lazy' />
           </ImageWrapper>
           <Footer>
-            <CardTitle>{product.title}</CardTitle>
+            <Link to={`/product/${product.id}`}>
+              <CardTitle>{product.title}</CardTitle>
+            </Link>
+            {details && (
+              <CardDescription>{product.description}</CardDescription>
+            )}
             <div>
               <CardPrice>$ {product.price}</CardPrice>
               <Button onClick={() => addToCart(product)}>
