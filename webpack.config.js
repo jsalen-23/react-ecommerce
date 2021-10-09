@@ -11,6 +11,7 @@ module.exports = (env, args) => {
       path: path.resolve(__dirname, 'build'),
       filename: isProduction ? '[name].[contenthash].js' : 'main.js',
       publicPath: '/',
+      clean: true,
     },
     devServer: {
       port: 3000,
