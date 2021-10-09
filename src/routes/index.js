@@ -6,6 +6,7 @@ import Navigation from '../components/Navigation';
 import Cart from '../pages/Cart';
 import Checkout from '../pages/Checkout';
 import Favorites from '../pages/Favorites';
+import NotFound from '../pages/NotFound';
 import Payment from '../pages/Payment';
 import PaymentResult from '../pages/PaymentResult';
 
@@ -25,6 +26,7 @@ const Routes = () => {
           component={PaymentResult}
         />
         <Route exact path='/checkout/payment/fail' component={PaymentResult} />
+        <Route component={NotFound} />
       </Switch>
       <Navigation />
     </Router>
