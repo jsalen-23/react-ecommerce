@@ -12,7 +12,12 @@ export const Footer = styled.footer`
   background-color: #15202b;
 
   @media ${device.laptop} {
+    height: auto;
     margin-left: 88px;
+    padding-bottom: 28px;
+    right: 0;
+    left: 0;
+    bottom: 0;
 
     button {
       width: 50%;

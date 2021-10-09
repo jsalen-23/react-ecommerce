@@ -12,7 +12,7 @@ export const Wrapper = styled.article`
 
   @media ${device.laptop} {
     padding-right: 74px;
-    padding-bottom: 36px;
+    padding-bottom: 12px;
   }
 
   @media ${device.laptopL} {
