@@ -4,9 +4,9 @@ This is a fake store made with ReactJS. [FakeStoreAPI](https://fakestoreapi.com/
 
 [React-Paypal-Button-v2](https://www.npmjs.com/package/react-paypal-button-v2) was used to handle payments with such platform. At the moment it uses only a SandBox to test payments. This payment process can be tested with the following Fake Credit Card:
 
-Card Number: `4242424242424242`
-CVC: Any 3 digits.
-Date: Any future date.
+- Card Number: `4242424242424242`
+- CVC: Any 3 digits.
+- Date: Any future date.
 
 Since my designer skills are still not developed, I took [Twitter](https://twitter.com/) as a little inspiration and some details from Chilean Retailer [Hites](https://hites.cl/). `Styled-components` was used to give styling to this project.
 
