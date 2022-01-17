@@ -1,16 +1,15 @@
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
-import Header from '../components/Header';
-import Home from '../pages/Home';
-import Navigation from '../components/Navigation';
-import Cart from '../pages/Cart';
-import Checkout from '../pages/Checkout';
-import Favorites from '../pages/Favorites';
-import NotFound from '../pages/NotFound';
-import Payment from '../pages/Payment';
-import PaymentResult from '../pages/PaymentResult';
-import ProductDetails from '../components/ProductDetails';
-import Product from '../pages/Product';
+import Header from '../components/Header'
+import Home from '../pages/Home'
+import Navigation from '../components/Navigation'
+import Cart from '../pages/Cart'
+import Checkout from '../pages/Checkout'
+import Favorites from '../pages/Favorites'
+import NotFound from '../pages/NotFound'
+import Payment from '../pages/Payment'
+import PaymentResult from '../pages/PaymentResult'
+import Product from '../pages/Product'
 
 const Routes = () => {
   return (
@@ -33,7 +32,7 @@ const Routes = () => {
       </Switch>
       <Navigation />
     </Router>
-  );
-};
+  )
+}
 
-export default Routes;
+export default Routes
