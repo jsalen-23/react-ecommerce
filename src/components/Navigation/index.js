@@ -1,36 +1,30 @@
-import { useContext } from 'react';
-import { AppContext } from '../../context/AppContext';
-import { Nav, Link } from './styles';
-import { MdHome, MdShoppingCart, MdFavorite } from 'react-icons/md';
-import CartCounter from '../CartCounter';
-import useWindowSize from '../../hooks/useWindowSize';
+import { useContext } from 'react'
+import { AppContext } from '../../context/AppContext'
+import { Nav, Link } from './styles'
+import { MdHome, MdShoppingCart, MdFavorite } from 'react-icons/md'
+import CartCounter from '../CartCounter'
 
 const Navigation = () => {
-  const size = useWindowSize();
   const {
     state: {
       cart: { products },
     },
-  } = useContext(AppContext);
-
-  const label = (text) => {
-    return size.width >= 1440 && text;
-  };
+  } = useContext(AppContext)
 
   return (
     <Nav>
       <Link exact to='/'>
-        <MdHome /> {label('Home')}
+        <MdHome />
       </Link>
       <Link exact to='/cart'>
         {products.length > 0 && <CartCounter counter={products.length} />}
-        <MdShoppingCart /> {label('Cart')}
+        <MdShoppingCart />
       </Link>
       <Link exact to='/favorites'>
-        <MdFavorite /> {label('Saved')}
+        <MdFavorite />
       </Link>
     </Nav>
-  );
-};
+  )
+}
 
-export default Navigation;
+export default Navigation

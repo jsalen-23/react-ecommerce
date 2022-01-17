@@ -1,19 +1,18 @@
-import styled from 'styled-components';
-import { NavLink as LinkRouter } from 'react-router-dom';
-import { fadeIn } from '../../statics/styles/animations';
-import { device } from '../../mediaQuery';
+import styled from 'styled-components'
+import { NavLink as LinkRouter } from 'react-router-dom'
+import { fadeIn } from '../../statics/styles/animations'
+import { device } from '../../mediaQuery'
 
 export const Nav = styled.nav`
-  width: 100%;
-  max-width: 768px;
-  height: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: fixed;
   right: 0;
   bottom: 0;
   left: 0;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-top: 1px solid #2c3841;
   background-color: #10161d;
   z-index: 3;
@@ -31,11 +30,7 @@ export const Nav = styled.nav`
     border-right: 1px solid #2c3841;
     border-top: none;
   }
-
-  @media ${device.laptopL} {
-    min-width: 210px;
-  }
-`;
+`
 
 export const Link = styled(LinkRouter)`
   width: 100%;
@@ -79,12 +74,8 @@ export const Link = styled(LinkRouter)`
 
   @media ${device.laptopL} {
     width: 100%;
-    padding-left: 64px;
     display: flex;
-    justify-content: flex-start;
-    font-size: 18px;
-    svg {
-      margin-right: 16px;
-    }
+    justify-content: center;
+    font-size: 24px;
   }
-`;
+`
