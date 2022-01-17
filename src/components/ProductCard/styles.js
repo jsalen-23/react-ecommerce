@@ -1,15 +1,15 @@
-import styled from 'styled-components';
-import { fadeIn } from '../../statics/styles/animations';
+import styled from 'styled-components'
+import { fadeIn } from '../../statics/styles/animations'
 
 export const Article = styled.article`
   ${fadeIn({ time: '0.36s' })}
   max-width: ${(props) => (props.details ? '768px' : '390px')};
-  min-width: 320px;
+  min-width: 260px;
   min-height: 400px;
   margin: 12px 0;
   border: 2px solid #2c3841;
   border-radius: 4px;
-`;
+`
 
 export const ImageWrapper = styled.div`
   width: 100%;
@@ -24,7 +24,7 @@ export const ImageWrapper = styled.div`
     object-fit: cover;
     aspect-ratio: 9 / 16;
   }
-`;
+`
 
 export const Footer = styled.footer`
   position: relative;
@@ -54,7 +54,7 @@ export const Footer = styled.footer`
       transform: scale(0.7);
     }
   }
-`;
+`
 
 export const CardTitle = styled.h4`
   display: -webkit-box;
@@ -63,15 +63,15 @@ export const CardTitle = styled.h4`
   overflow: hidden;
   font-size: 18px;
   font-weight: 500;
-`;
+`
 
 export const CardPrice = styled.p`
   font-size: 22px;
   font-weight: 400;
   color: #b5b5b5;
-`;
+`
 
 export const CardDescription = styled.p`
   min-width: 320px;
   margin-bottom: 16px;
-`;
+`

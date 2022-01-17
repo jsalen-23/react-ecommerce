@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { device } from '../../mediaQuery';
+import styled from 'styled-components'
+import { device } from '../../mediaQuery'
 
 export const Wrapper = styled.div`
   height: 100%;
@@ -11,6 +11,6 @@ export const Wrapper = styled.div`
   }
 
   @media ${device.laptopL} {
-    margin-left: 210px;
+    margin-left: 88px;
   }
-`;
+`
